@@ -13,7 +13,7 @@ Default options
 };
 ```
 
-Default options
+How to use
 --------------
 ```javascript
 $("a").setUndoButton({
