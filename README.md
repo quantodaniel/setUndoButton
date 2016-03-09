@@ -15,12 +15,25 @@ Default options
 
 How to use
 --------------
+
+```html
+<ul>
+  <li><a href="#">Link 1</a></li>
+  <li><a href="#">Link 2</a></li>
+  <li><a href="#">Link 3</a></li>
+  <li><a href="#">Link 4</a></li>
+  <li><a href="#">Link 5</a></li>
+</ul>
+```
+
 ```javascript
 $("a").setUndoButton({
   time: 5, // in seconds
   text: "undo action",
   onTimeout: function() {
-    this.remove(); // 'this' is the jQuery object
+    this.parent()remove(); // 'this' is the jQuery object
   }
 });
 ```
+
+![Alt text](http://g.recordit.co/ZO6CQ4LSmT.gif "How to use")
