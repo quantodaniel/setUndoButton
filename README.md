@@ -1,8 +1,7 @@
 # setUndoButton
 Simple way to show an undo button and set time to execute action via javascript
 
-Default options
---------------
+## Default options
 ```javascript
 {
   time: 5, // in seconds
@@ -14,9 +13,8 @@ Default options
 };
 ```
 
-Examples
---------------
-
+## Examples
+### Simple undo with countdown
 ```html
 <ul>
   <li><a href="#">Link 1</a></li>
@@ -38,6 +36,7 @@ $("a").setUndoButton({
 ```
 ![Alt text](http://g.recordit.co/0fTi6PMEsm.gif "Example")
 
+### More complex with onClick, onUndo and onTimeout events
 ```javascript
 $("a").setUndoButton({
   time: 5, // in seconds
