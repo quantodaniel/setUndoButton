@@ -6,7 +6,7 @@ Simple way to show an undo button and set time to execute action via javascript
 {
   time: 5, // in seconds
   text: "undo",
-  showCountdown: true,
+  countdown: true,
   onUndo: function() {},
   onClick: function() {},
   onTimeout: function() {}
@@ -29,8 +29,8 @@ Simple way to show an undo button and set time to execute action via javascript
 $("a").setUndoButton({
   time: 5, // in seconds
   text: "undo action",
-  onTimeout: function($target) {
-    $target.parent().remove(); // '$target' is the jQuery object
+  onTimeout: function(target) {
+    $(target).parent().remove();
   }
 });
 ```
@@ -41,15 +41,15 @@ $("a").setUndoButton({
 $("a").setUndoButton({
   time: 5, // in seconds
   text: "undo",
-  showCountdown: false,
-  onClick: function($target) {
-    $target.parent().toggleClass("opacity"); // '$target' is the jQuery object
+  countdown: false,
+  onClick: function(target) {
+    $(target).parent().toggleClass("opacity"); 
   },
-  onUndo: function($target) {
-    $target.parent().toggleClass("opacity"); // '$target' is the jQuery object
+  onUndo: function(target) {
+    $(target).parent().toggleClass("opacity"); 
   },
-  onTimeout: function($target) {
-    $target.parent().slideUp(); // '$target' is the jQuery object
+  onTimeout: function(target) {
+    $(target).parent().slideUp(); 
   }
 });
 ```
