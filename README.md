@@ -8,12 +8,13 @@ Default options
   time: 5, // in seconds
   text: "undo",
   showCountdown: true,
+  onUndo: function() {},
   onClick: function() {},
   onTimeout: function() {}
 };
 ```
 
-How to use
+Examples
 --------------
 
 ```html
@@ -30,10 +31,28 @@ How to use
 $("a").setUndoButton({
   time: 5, // in seconds
   text: "undo action",
-  onTimeout: function() {
-    this.parent().remove(); // 'this' is the jQuery object
+  onTimeout: function($target) {
+    $target.parent().remove(); // '$target' is the jQuery object
   }
 });
 ```
-
 ![Alt text](http://g.recordit.co/0fTi6PMEsm.gif "Example")
+
+```javascript
+$("a").setUndoButton({
+  time: 5, // in seconds
+  text: "undo",
+  showCountdown: false,
+  onClick: function($target) {
+    $target.parent().toggleClass("opacity"); // '$target' is the jQuery object
+  },
+  onUndo: function($target) {
+    $target.parent().toggleClass("opacity"); // '$target' is the jQuery object
+  },
+  onTimeout: function($target) {
+    $target.parent().slideUp(); // '$target' is the jQuery object
+  }
+});
+```
+![Alt text](http://postimg.org/image/ihowk0fob/ "Example")
+
