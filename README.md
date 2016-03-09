@@ -31,9 +31,9 @@ $("a").setUndoButton({
   time: 5, // in seconds
   text: "undo action",
   onTimeout: function() {
-    this.parent()remove(); // 'this' is the jQuery object
+    this.parent().remove(); // 'this' is the jQuery object
   }
 });
 ```
 
-![Alt text](http://g.recordit.co/ZO6CQ4LSmT.gif "How to use")
+![Alt text](http://g.recordit.co/0fTi6PMEsm.gif "Example")
