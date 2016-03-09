@@ -54,5 +54,5 @@ $("a").setUndoButton({
   }
 });
 ```
-![Alt text](http://postimg.org/image/ihowk0fob/ "Example")
+![Alt text](http://s17.postimg.org/b1pmy7rz3/js_click_v2.gif "Example")
 
